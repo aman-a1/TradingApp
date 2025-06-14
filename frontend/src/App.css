@@ -1,0 +1,344 @@
+/**
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+
+/** 
+gold rate css
+*/
+/* src/App.css - Add to or modify your existing CSS */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.dashboard-container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #0056b3;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* PriceDisplay styles (from previous example, adjust if needed) */
+.price-card {
+  background-color: #e9f5ff; /* Light blue */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.price-card h2 {
+  width: 100%;
+  color: #004085;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.metal-rate {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+  background-color: #d1ecf1; /* Even lighter blue */
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.metal-rate h3 {
+  color: #007bff;
+  margin-bottom: 8px;
+  font-size: 1.4em;
+}
+
+.metal-rate p {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #212529;
+}
+
+.last-updated {
+  font-size: 0.85em;
+  color: #6c757d;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Portfolio Summary */
+.portfolio-summary {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #dee2e6;
+}
+
+.portfolio-summary h3 {
+  color: #28a745;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+.portfolio-summary .balance {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.portfolio-summary .holdings {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.portfolio-summary .holdings h4 {
+  color: #343a40;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.portfolio-summary .holdings p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Trade Forms Container */
+.trade-forms-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.trade-form {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.trade-form h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.trade-form .price-info p {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #6c757d;
+}
+
+.trade-form .price-info .current-execution-price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.trade-form .trade-type-buttons button {
+  padding: 8px 15px;
+  margin: 0 5px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1em;
+}
+
+.trade-form .trade-type-buttons button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.trade-form .trade-type-buttons button:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #adb5bd;
+}
+
+.trade-form .quantity-input {
+  margin: 20px 0;
+}
+
+.trade-form .quantity-input label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.trade-form .quantity-input input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.trade-form .estimated-total {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.trade-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.trade-form button:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.trade-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Trade History */
+.trade-history {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.trade-history h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.trade-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.trade-history th,
+.trade-history td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  text-align: center;
+}
+
+.trade-history th {
+  background-color: #e9ecef;
+  font-weight: bold;
+  color: #495057;
+}
+
+.trade-history tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.trade-history .buy-row {
+  color: #28a745; /* Green for buy */
+}
+
+.trade-history .sell-row {
+  color: #dc3545; /* Red for sell */
+}
+
+.trade-history td.success {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.trade-history td.failed {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.refresh-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #5a6268;
+}
